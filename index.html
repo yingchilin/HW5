@@ -1,0 +1,78 @@
+<!--
+File: index.html
+GUI Assignment: A bit of Scrabble with Drag-and-Drop
+Yingchi Lin, UMass Lowell Computer Science, yingchi_Lin@student.uml.edu
+Copyright (c) 2022 by Yingchi. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+June 30, 2022
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scrabble game</title>
+
+    <!--jquery, jquery ui and jquery ui css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
+    <!-- css and js file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="graphics_data/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+    <script src="js/script.js"></script>
+    
+  </head>
+  <body>
+    
+    <!--Scrabble Game main page-->
+    <div id="main">
+        <header> 
+            <h1>Scrabble Game</h1> 
+        </header>
+        <div id = "scoreTable">
+            <div>
+                <div class="label">Word: <span id="word"></span></div>
+            </div>
+            <div>
+                <div class="label">Score: <span id="totalScore">0</span>[+<span id="curScore"></span>]</div>
+            </div>
+        </div> 
+        <div id="board">
+            <div id = "droppable" class="blank droppable ui-widget-header">
+           
+            </div >
+            <div id = "doublescore" class="doubleWord droppable ui-widget-header">
+               
+            </div>
+            <div id = "droppable" class="blank  droppable ui-widget-header">
+                
+            </div >
+            <div id = "droppable" class="blank droppable ui-widget-header">
+                
+            </div>
+            <div id = "droppable" class="blank  droppable ui-widget-header">
+                
+            </div>
+            <div id = "doublescore" class="doubleWord  droppable ui-widget-header">
+                
+            </div>
+            <div id = "droppable" class="blank  droppable ui-widget-header">
+                
+            </div>
+        </div>
+        <div id="buttonSection">
+            <button id="nextWord" disabled="disabled" onclick="nextWord()">Next</button>
+            <button id="reset" onclick="restarGame()">Reset</button>
+        </div>
+        
+        <div id="rack"></div>
+        <div id="remaining_tiles_section">
+            <div>Remaining Tiles:</div>
+            <div id="remainingTiles"></div>
+        </div>
+
+    </div> 
+    
+  </body>
+</html>

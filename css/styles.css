@@ -1,0 +1,137 @@
+/*
+File: style.css
+GUI Assignment: A CSS file that style the Scrabble game page with readability.
+Yingchi Lin, UMass Lowell Computer Science, yingchi_Lin@student.uml.edu
+Copyright (c) 2022 by Yingchi. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+June 30, 2022
+*/
+
+/* background color and font family */
+body {
+    background-color: #0c4c37;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d9d6d6;
+}
+
+/* set the style for button section */
+#buttonSection {
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+}
+
+button {
+    box-shadow: 3px 4px 0px 0px #15ad3d;
+	background:linear-gradient(to bottom, #ccf635 5%, #fdfd0c 100%);
+	background-color:#f8ff79;
+	border-radius:5px;
+	border:1px solid #0e1509;
+	display:inline-block;
+	cursor:pointer;
+	color:#100f0f;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 60px;
+	text-decoration:none;
+}
+
+/* set the style for board */
+#board {
+    width: 400px;
+    height: 100px;
+}
+
+
+.draggable {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #b5a96f;
+}
+
+
+.droppable {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0;
+    margin-right: 2px;
+    position: relative;
+    top: 2px;
+    border: 1px #4e095a;
+}
+
+/* background color and boder style for main area */
+#main {
+    background-color: #0c4c37;
+    margin: auto;
+    width: 900px;    
+    border: 5px #b6c2ca solid;
+    border-radius:5px;
+}
+
+
+span {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* set the style for h1 */
+h1 {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    background-color: #222020;
+}
+
+/* set the style for score_table */
+#scoreTable {
+    height: 30px;
+    width: 400px;
+    margin-left: 15px;
+}
+
+#scoreTable div {
+	display: inline-block;
+    margin-left: 15px;
+}
+
+/* set the style for rack */
+#rack {
+    max-width: 600px;
+    height: 150px;
+    object-fit: contain;
+    padding-top: 45px;
+    padding-left: 70px;
+    background-image: url('../graphics_data/scrabble-tile-holder-406774_640.png') ;
+    background-repeat: no-repeat;
+}
+
+/* set background image for blank tile */
+.blank {
+    background-image: url('../graphics_data/nothing.png');    
+}
+
+/* set background image for double word tile */
+.doubleWord {
+    background-image: url('../graphics_data/double.png');
+}
+
+#main > * {
+    margin: auto;
+}
+
+/* Highlight drop targets */
+.highlightHover {
+    box-shadow: 0 0 10px #F0E68C;    
+}
+
+/* set the style for remaining tiles section */
+#remaining_tiles_section {
+	text-align: center;
+	font-weight: bold;
+	color:rgb(255, 0, 115);
+	display: inline;
+}
